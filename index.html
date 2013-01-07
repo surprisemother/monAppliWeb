@@ -9,6 +9,8 @@
 <meta name="date" content="2012-12-22T08:30:45+01:00" /> 
 <!-- <link rel="shortcut icon" type="image/x-icon" href="monIcon.ico" /> --> 
 <title>Mon application Web</title> 
+<script src="monScript.css" type="text/Javascript" LANGUAGE="JavaScript"></script>
+<link rel="stylesheet" type="text/css" href="monCSS.css" /> 
 </head> 
 <body> 
 <div id="monEntete"> 
@@ -26,20 +28,57 @@
       <li><a href="index.html" title="Nous contacter" class="current">Nous contacter</a></li> 
    </ul> 
 </div> 
- 
-<style type="text/css"> 
-  #monEntete{width:100%;text-align:center;margin:auto;} 
-  #maDivMenu{padding:25px 15px 0 15px;background:#fcead9;} 
-  ul#monMenu{list-style-type:none;width:100%;position:relative;height:27px;font-family:"Trebuchet 
-MS",Arial,sans-serif;font-size:13px;font-weight:bold;margin:0;padding:11px 0 0 0;} 
- ul#monMenu li{display:block;float:left;margin:0 0 0 24px;height:27px;} 
- ul#monMenu li.left{margin:0;} 
- ul#monMenu li a{display:block;float:left;color:#e06c08;background:#fdf1e5;line-height:27px;text-decoration:none;padding:0 17px 0 18px;height:27px;} 
- ul#monMenu li a.right{padding-right:19px;} 
- ul#monMenu li a:hover{color:#fdf1e5;background:#e06c08;} 
- ul#monMenu li a.current{color:#fdf1e5;background:#e06c08;} 
- ul#monMenu li a.current:hover{color:#fdf1e5;background:#e06c08;} 
-</style> 
+
+ <form name="maCalculette" action="" onSubmit="affResult();return false;"> 
+<div id="contenuPage"> 
+  <table class="calc"> 
+  <tr> 
+      <td colspan="4" class="ecran"> 
+      <input type="text" name="ecran" class="ecran" /> 
+      </td> 
+  </tr> 
+  <tr> 
+    <td classe="boutons"><input type="button" class="unBouton" value="7" 
+onClick="touche('7')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="8" 
+onClick="touche('8')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="9" 
+onClick="touche('9')" /></td> 
+<td classe="boutons"><input type="button" class="unBouton" value="&divide;" 
+onClick="touche('/')" /></td> 
+  </tr> 
+  <tr> 
+    <td classe="boutons"><input type="button" class="unBouton" value="4" 
+onClick="touche('4')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="5" 
+onClick="touche('5')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="6" 
+onClick="touche('6')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="x" 
+onClick="touche('*')" /></td> 
+  </tr> 
+  <tr> 
+    <td classe="boutons"><input type="button" class="unBouton" value="1" 
+onClick="touche('1')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="2" 
+onClick="touche('2')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="3" 
+onClick="touche('3')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="-" onClick="touche('-')" /></td> 
+  </tr> 
+  <tr> 
+    <td classe="boutons"><input type="button" class="unBouton" value="0" 
+onClick="touche('0')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="." 
+onClick="touche('.')" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="=" 
+onClick="affResult()" /></td> 
+    <td classe="boutons"><input type="button" class="unBouton" value="+" 
+onClick="touche('+')" /></td> 
+  </tr> 
+       </table> 
+   </div> 
+</form>
 </body>
 
 
